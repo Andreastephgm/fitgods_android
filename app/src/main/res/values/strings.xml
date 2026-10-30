@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">fit_gods</string>
+    <string name="menu">Abrir menú</string>
+    <string name="notifications">Notificaciones</string>
+</resources>

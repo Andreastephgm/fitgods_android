@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Top Bar: Logo y FIT GODS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/logo"
+                    android:contentDescription="Logo"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FIT GODS"
+                    android:textColor="#DFFF2E"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEGUIMIENTO"
+                android:textColor="#DFFF2E"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mi Progreso"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consulta tus avances y registra tus resultados"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginBottom="20dp">
+
+                <!-- Peso actual -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:background="#171717"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PESO ACTUAL"
+                        android:textColor="#AAAAAA"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvPesoActual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 kg"
+                        android:textColor="#DFFF2E"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="6dp"/>
+                </LinearLayout>
+
+                <!-- Avance -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"
+                    android:background="#171717"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AVANCE"
+                        android:textColor="#AAAAAA"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvAvanceGeneral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 %"
+                        android:textColor="#DFFF2E"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="6dp"/>
+                </LinearLayout>
+
+                <!-- Registros -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:background="#171717"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="REGISTROS"
+                        android:textColor="#AAAAAA"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvTotalRegistros"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="6dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Tarjeta: Registrar Progreso (Formulario) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#171717"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:layout_marginBottom="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registrar progreso"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agrega un nuevo registro de tu evolución."
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Fila Inputs: Fecha y Peso -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fecha"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="4dp"/>
+
+                        <EditText
+                            android:id="@+id/etFecha"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="2026-08-30"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:paddingHorizontal="10dp"
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="date"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Peso (kg)"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="4dp"/>
+
+                        <EditText
+                            android:id="@+id/etPeso"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:hint="Ej. 60"
+                            android:textColor="#000000"
+                            android:textColorHint="#777777"
+                            android:textSize="14sp"
+                            android:paddingHorizontal="10dp"
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="numberDecimal"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Input Porcentaje de avance -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Porcentaje de avance"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/etPorcentaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Ej. 70"
+                    android:textColor="#000000"
+                    android:textColorHint="#777777"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="10dp"
+                    android:background="@android:drawable/edit_text"
+                    android:inputType="number"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Input Observaciones -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Observaciones"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/etObservaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="Escribe cómo te fué..."
+                    android:textColor="#000000"
+                    android:textColorHint="#777777"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:gravity="top"
+                    android:background="@android:drawable/edit_text"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Botón Guardar Registro -->
+                <Button
+                    android:id="@+id/btnGuardarRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="GUARDAR REGISTRO"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#DFFF2E"/>
+
+            </LinearLayout>
+
+            <!-- Sección Historial -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historial"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- RecyclerView para listar el historial de manera dinámica -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Barra de Navegación Inferior Fija -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#121212"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/navInicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/logo"
+                android:contentDescription="Inicio"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:textColor="#AAAAAA"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navRutinas"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/routine"
+                android:contentDescription="Rutinas"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rutinas"
+                android:textColor="#AAAAAA"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navProgreso"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/fuerza"
+                android:contentDescription="Progreso"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Progreso"
+                android:textColor="#DFFF2E"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/logo"
+                android:contentDescription="Perfil"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
+                android:textColor="#AAAAAA"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

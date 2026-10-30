@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#171717"
+    android:padding="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detalles de la Rutina"
+        android:textColor="#DFFF2E"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etDialogRoutineName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nombre de la rutina (Ej: Piernas)"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#777777"
+        android:background="#222222"
+        android:paddingHorizontal="12dp"
+        android:layout_marginBottom="12dp"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/etDialogRoutineObjective"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Objetivo (Ej: Hipertrofia)"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#777777"
+        android:background="#222222"
+        android:paddingHorizontal="12dp"
+        android:inputType="text"/>
+
+</LinearLayout>

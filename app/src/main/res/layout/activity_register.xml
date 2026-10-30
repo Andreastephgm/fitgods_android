@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FIT GODS"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:textSize="34sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUPERA TUS LÍMITES"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:letterSpacing="0.2"
+            android:layout_gravity="center"
+            android:layout_marginBottom="35dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear cuenta"
+            android:textColor="#DFFF2E"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completa los siguientes datos para comenzar tu entrenamiento."
+            android:textColor="#AAAAAA"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="25dp"/>
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Nombre"
+            android:textColorHint="#888888"
+            android:textColor="#000000"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:background="@android:drawable/edit_text"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <EditText
+            android:id="@+id/etApellido"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Apellido"
+            android:textColorHint="#888888"
+            android:textColor="#000000"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:background="@android:drawable/edit_text"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <EditText
+            android:id="@+id/etCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Correo electrónico"
+            android:textColorHint="#888888"
+            android:textColor="#000000"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:background="@android:drawable/edit_text"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Contraseña"
+            android:textColorHint="#888888"
+            android:textColor="#000000"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:background="@android:drawable/edit_text"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Confirmar contraseña"
+            android:textColorHint="#888888"
+            android:textColor="#000000"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:background="@android:drawable/edit_text"/>
+
+        <CheckBox
+            android:id="@+id/checkTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acepto los términos y condiciones"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:text="CREAR CUENTA"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:backgroundTint="#DFFF2E"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Ya tienes una cuenta?"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/txtLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Inicia sesión"
+                android:textColor="#DFFF2E"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

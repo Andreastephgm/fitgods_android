@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FIT GODS"
+            android:textColor="#DFFF2E"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUPERA TUS LÍMITES"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:letterSpacing="0.2"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicia sesión"
+            android:textColor="#DFFF2E"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido de vuelta, estás a un paso de tu mejor versión."
+            android:textColor="#B0B0B0"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"/>
+
+
+        <EditText
+            android:id="@+id/etCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Correo electrónico"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:background="@android:drawable/edit_text"
+            android:padding="15dp"
+            android:inputType="textEmailAddress"/>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="18dp"/>
+
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Contraseña"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:background="@android:drawable/edit_text"
+            android:padding="15dp"
+            android:inputType="textPassword"/>
+
+        <TextView
+            android:id="@+id/txtForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Olvidaste tu contraseña?"
+            android:textColor="#DFFF2E"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:layout_marginTop="18dp"/>
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="INICIAR SESIÓN"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:backgroundTint="#DFFF2E"
+            android:layout_marginTop="35dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="────────  ó  ────────"
+            android:textColor="#AAAAAA"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"/>
+
+
+        <Button
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Continuar con Google"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#222222"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿No tienes cuenta? "
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txtRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regístrate"
+                android:textStyle="bold"
+                android:textColor="#DFFF2E"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
